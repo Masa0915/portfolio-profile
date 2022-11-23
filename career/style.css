@@ -1,0 +1,259 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    padding: 20px;
+}
+dd{
+    line-height: 2;
+}
+.header1{
+    margin-left: 50px;
+}
+
+.header2{
+    margin-right: 50px;
+}
+
+.header2 nav ul{
+    display: flex;
+}
+
+.header2 nav ul li{
+    margin-left: 20px;
+}
+
+/* メイン */
+main{
+    background-image: url(../img/city-g25bd3bf4a_1920.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+main::after{
+    content: '';
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+
+section{
+    position: relative;
+    z-index: 1;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 3rem;
+    opacity: 0;
+    transition: 1s;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-title.active{
+    transition: 1s;
+    opacity: 1;
+}
+
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    transition: 1s;
+}
+
+.section.active{
+    opacity: 1;
+    transition: 1s;
+}
+
+
+.section-right-img{
+    display: block;
+    position: absolute;
+    width: 700px;
+    height: 600px;
+}
+
+
+
+.section-right-contents{
+    position: absolute;
+    right: 0;
+    width: 700px;
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+    padding: 50px;
+}
+
+
+.section-right-contents dt{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+.section-right-contents dd{
+    font-size: 1.2rem;
+}
+
+
+.section-right-contents p{
+    font-size: 1.5rem;
+}
+
+/* 左 */
+
+.section-left-img{
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 700px;
+    height: 600px;
+}
+
+.section-left-contents{
+    position: absolute;
+    width: 700px;
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+    padding: 50px;
+}
+
+
+.section-left-contents dt{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+.section-left-contents dd{
+    font-size: 1.2rem;
+}
+
+
+.section-left-contents p{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:600px){
+    header{
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .header1{
+        /* background-color: bisque; */
+        margin-left: 0;
+    }
+
+    .header2{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+    }
+
+    .header2 nav{
+        height: 100%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .header2 nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-title{
+        font-size: 1rem;
+        padding-bottom: 50px;
+    }
+
+    .section-right-img{
+        width: 100%;
+        position: static;
+        height: 200px;
+    }
+    .section-left-img{
+        width: 100%;
+        position: static;
+        height: 200px;
+    }
+
+    .section-right-contents{
+        width: 100%;
+        position: static;
+        padding: 0;
+    }
+
+    .section-left-contents{
+        width: 100%;
+        position: static;
+        padding: 0;
+    }
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .section-right-contents dt{
+        /* text-align: center; */
+        font-size: 1.5rem;
+        /* padding-bottom: 30px; */
+        padding-top: 30px;
+    }
+    .section-right-contents dd{
+        font-size: 1rem;
+        line-height: 2;
+        padding: 20px;
+    }
+
+    .section-left-contents dt{
+        /* text-align: center; */
+        font-size: 1.5rem;
+        padding-top: 30px;
+        /* padding-bottom: 30px; */
+    }
+    .section-left-contents dd{
+        font-size: 1rem;
+        line-height: 2;
+        padding: 20px;
+    }
+
+}

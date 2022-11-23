@@ -1,0 +1,191 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    padding: 20px;
+}
+
+.header1{
+    margin-left: 50px;
+}
+
+.header2{
+    margin-right: 50px;
+}
+
+.header2 nav ul{
+    display: flex;
+}
+
+.header2 nav ul li{
+    margin-left: 20px;
+}
+
+/* メイン */
+main{
+    background-image: url(./img/river-view-gad467632e_1920.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+main::after{
+    content: '';
+    background-color:black;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    top: 0;
+}
+
+.main-title{
+    font-size: 2rem;
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.main-title.active{
+    transition: 2s;
+    opacity: 1;
+}
+
+.main-title h1{
+    display: block;
+    background-color: rgb(0, 0, 0,0.5);
+    padding: 20px;
+    z-index: 2;
+    margin-bottom: 300px;
+}
+
+
+.main-access{
+    z-index: 3;
+    flex-direction: column;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    margin-right: 0;
+    margin-left: auto;
+    opacity: 0;
+}
+
+.main-access.active{
+    transition: 2s;
+    opacity: 1;
+}
+
+.main-access a{
+    background-color: rgb(0, 0, 0,0.5);
+    font-size: 2rem;
+    color: white;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.main-access a:nth-child(1){
+    width: 100%;
+    right: 0;
+}
+.main-access a:nth-child(2){
+    width: 90%;
+    margin-left: auto;
+}
+.main-access a:nth-child(3){
+    width: 80%;
+    margin-left: auto;
+}
+
+@media screen and (max-width:600px){
+    header{
+        /* background-color: red; */
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .header1{
+        /* background-color: bisque; */
+        margin-left: 0;
+    }
+
+    .header2{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+    }
+
+    .header2 nav{
+        height: 100%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    .header2 nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-title{
+        /* background-color: red; */
+        width: 90%;
+        padding-top: 100px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-title h1{
+        /* background-color: aqua; */
+        z-index: 1;
+        margin-bottom: 0;
+        padding: 0;
+        font-size: 3rem;
+    }
+    .main-access{
+        width: 100%;
+        /* background-color: antiquewhite; */
+        margin-top: 0;
+    }
+
+    .main-access a{
+        font-size: 1.5rem;
+    }
+}
